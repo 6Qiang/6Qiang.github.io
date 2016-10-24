@@ -84,15 +84,36 @@
 
 
 
-<meta name="description" content="Nothing but SharePoint">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SharePoint Tips">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="简介本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。
+方便演示创建了一个自定义列表，自定义列表包含多个字段，所有字段显示名称都被命名为基于它们所属字段类型的字段。例如，文本类型字段命名为textfield,如下图：
+
+适用于下面展示的例子与测试，适用于以下版本的 SharePoint：
+
+SharePoint 2010
+SharePoint 2013初始化De">
+<meta property="og:type" content="article">
+<meta property="og:title" content="服务器对象模型中赋值取值完全指南">
+<meta property="og:url" content="http://yoursite.com/2016/10/24/服务器对象模型中赋值取值完全指南/index.html">
 <meta property="og:site_name" content="SharePoint Tips">
-<meta property="og:description" content="Nothing but SharePoint">
+<meta property="og:description" content="简介本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。
+方便演示创建了一个自定义列表，自定义列表包含多个字段，所有字段显示名称都被命名为基于它们所属字段类型的字段。例如，文本类型字段命名为textfield,如下图：
+
+适用于下面展示的例子与测试，适用于以下版本的 SharePoint：
+
+SharePoint 2010
+SharePoint 2013初始化De">
+<meta property="og:image" content="https://mmbiz.qlogo.cn/mmbiz_png/ZQxVRvmZ4aOLEm1O7Zp4SGnBXkzDupmWfm9Cicgf8pxvgZlssBIVx9ZKhj7AnUR9yPrwGhNglAjjBibMfVHfHTwA/0?wx_fmt=png">
+<meta property="og:updated_time" content="2016-10-24T10:57:22.963Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SharePoint Tips">
-<meta name="twitter:description" content="Nothing but SharePoint">
+<meta name="twitter:title" content="服务器对象模型中赋值取值完全指南">
+<meta name="twitter:description" content="简介本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。
+方便演示创建了一个自定义列表，自定义列表包含多个字段，所有字段显示名称都被命名为基于它们所属字段类型的字段。例如，文本类型字段命名为textfield,如下图：
+
+适用于下面展示的例子与测试，适用于以下版本的 SharePoint：
+
+SharePoint 2010
+SharePoint 2013初始化De">
+<meta name="twitter:image" content="https://mmbiz.qlogo.cn/mmbiz_png/ZQxVRvmZ4aOLEm1O7Zp4SGnBXkzDupmWfm9Cicgf8pxvgZlssBIVx9ZKhj7AnUR9yPrwGhNglAjjBibMfVHfHTwA/0?wx_fmt=png">
 
 
 
@@ -113,10 +134,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/24/服务器对象模型中赋值取值完全指南/"/>
 
 
-  <title> SharePoint Tips </title>
+  <title> 服务器对象模型中赋值取值完全指南 | SharePoint Tips </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-cn">
@@ -137,9 +158,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -218,9 +237,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -240,10 +259,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/10/24/服务器对象模型中赋值取值完全指南/" itemprop="url">
-                  服务器对象模型中赋值取值完全指南
-                </a>
+                服务器对象模型中赋值取值完全指南
               
             
           </h1>
@@ -283,9 +299,7 @@
       
 
       
-        
-          
-            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。</p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。</p>
 <p>方便演示创建了一个自定义列表，自定义列表包含多个字段，所有字段显示名称都被命名为基于它们所属字段类型的字段。例如，文本类型字段命名为<code>textfield</code>,如下图：</p>
 <p><img src="https://mmbiz.qlogo.cn/mmbiz_png/ZQxVRvmZ4aOLEm1O7Zp4SGnBXkzDupmWfm9Cicgf8pxvgZlssBIVx9ZKhj7AnUR9yPrwGhNglAjjBibMfVHfHTwA/0?wx_fmt=png" alt="Alt text"></p>
 <h2 id="适用于"><a href="#适用于" class="headerlink" title="适用于"></a>适用于</h2><p>下面展示的例子与测试，适用于以下版本的 SharePoint：</p>
@@ -415,16 +429,20 @@
 <p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldtype.aspx" target="_blank" rel="external">SPFieldType</a></p>
 <p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spdatetimefieldformattype.aspx" target="_blank" rel="external">SPDateTimeFieldFormatType</a></p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -432,121 +450,32 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/10/24/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
             
-              
-                
-                <a class="post-title-link" href="/2016/10/24/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
-            <time itemprop="dateCreated" datetime="2016-10-24T10:24:00+08:00" content="2016-10-24">
-              2016-10-24
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -554,6 +483,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -573,8 +506,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Inhaltsverzeichnis
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Übersicht
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -610,6 +552,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#适用于"><span class="nav-number">2.</span> <span class="nav-text">适用于</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化Demo数据"><span class="nav-number">3.</span> <span class="nav-text">初始化Demo数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取列表中和一个-SPListItem"><span class="nav-number">3.1.</span> <span class="nav-text">获取列表中和一个 SPListItem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建示例中所使用的变量"><span class="nav-number">3.2.</span> <span class="nav-text">创建示例中所使用的变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赋值、取值示例"><span class="nav-number">4.</span> <span class="nav-text">赋值、取值示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取标题"><span class="nav-number">4.1.</span> <span class="nav-text">设置和获取标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取文本字段"><span class="nav-number">4.2.</span> <span class="nav-text">设置和获取文本字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多行文本-或富文本-字段"><span class="nav-number">4.3.</span> <span class="nav-text">多行文本(或富文本)字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取Yes-No-字段-布尔值"><span class="nav-number">4.4.</span> <span class="nav-text">设置和获取Yes/No 字段(布尔值)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取数字字段"><span class="nav-number">4.5.</span> <span class="nav-text">设置和获取数字字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取货币字段"><span class="nav-number">4.6.</span> <span class="nav-text">设置和获取货币字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取百分百的字段"><span class="nav-number">4.7.</span> <span class="nav-text">设置和获取百分百的字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取日期字段"><span class="nav-number">4.8.</span> <span class="nav-text">设置和获取日期字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取单择字段"><span class="nav-number">4.9.</span> <span class="nav-text">设置和获取单择字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取多选择字段"><span class="nav-number">4.10.</span> <span class="nav-text">设置和获取多选择字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取单用户字段字段"><span class="nav-number">4.11.</span> <span class="nav-text">设置和获取单用户字段字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取多用户字段"><span class="nav-number">4.12.</span> <span class="nav-text">设置和获取多用户字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取查阅字段"><span class="nav-number">4.13.</span> <span class="nav-text">设置和获取查阅字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取超链接字段"><span class="nav-number">4.14.</span> <span class="nav-text">设置和获取超链接字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取托管的元数据字段"><span class="nav-number">4.15.</span> <span class="nav-text">设置和获取托管的元数据字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取值的多个托管元数据字段"><span class="nav-number">4.16.</span> <span class="nav-text">设置和获取值的多个托管元数据字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取计算的字段"><span class="nav-number">4.17.</span> <span class="nav-text">设置和获取计算的字段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -706,6 +659,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 

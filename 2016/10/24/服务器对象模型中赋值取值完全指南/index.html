@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion">
+<html class="theme-next pisces use-motion">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -90,7 +90,9 @@
 适用于下面展示的例子与测试，适用于以下版本的 SharePoint：
 
 SharePoint 2010
-SharePoint 2013初始化De">
+SharePoint 2013
+
+初始化">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务器对象模型中赋值取值完全指南">
 <meta property="og:url" content="http://yoursite.com/2016/10/24/服务器对象模型中赋值取值完全指南/index.html">
@@ -101,9 +103,11 @@ SharePoint 2013初始化De">
 适用于下面展示的例子与测试，适用于以下版本的 SharePoint：
 
 SharePoint 2010
-SharePoint 2013初始化De">
-<meta property="og:image" content="https://mmbiz.qlogo.cn/mmbiz_png/ZQxVRvmZ4aOLEm1O7Zp4SGnBXkzDupmWfm9Cicgf8pxvgZlssBIVx9ZKhj7AnUR9yPrwGhNglAjjBibMfVHfHTwA/0?wx_fmt=png">
-<meta property="og:updated_time" content="2016-10-24T10:57:22.963Z">
+SharePoint 2013
+
+初始化">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/ssom.png?raw=true">
+<meta property="og:updated_time" content="2016-10-24T11:37:35.760Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器对象模型中赋值取值完全指南">
 <meta name="twitter:description" content="简介本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。
@@ -112,15 +116,17 @@ SharePoint 2013初始化De">
 适用于下面展示的例子与测试，适用于以下版本的 SharePoint：
 
 SharePoint 2010
-SharePoint 2013初始化De">
-<meta name="twitter:image" content="https://mmbiz.qlogo.cn/mmbiz_png/ZQxVRvmZ4aOLEm1O7Zp4SGnBXkzDupmWfm9Cicgf8pxvgZlssBIVx9ZKhj7AnUR9yPrwGhNglAjjBibMfVHfHTwA/0?wx_fmt=png">
+SharePoint 2013
+
+初始化">
+<meta name="twitter:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/ssom.png?raw=true">
 
 
 
 <script type="text/javascript" id="hexo.configuration">
   var NexT = window.NexT || {};
   var CONFIG = {
-    scheme: 'Muse',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post"},
     fancybox: true,
     motion: true,
@@ -301,13 +307,13 @@ SharePoint 2013初始化De">
       
         <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。</p>
 <p>方便演示创建了一个自定义列表，自定义列表包含多个字段，所有字段显示名称都被命名为基于它们所属字段类型的字段。例如，文本类型字段命名为<code>textfield</code>,如下图：</p>
-<p><img src="https://mmbiz.qlogo.cn/mmbiz_png/ZQxVRvmZ4aOLEm1O7Zp4SGnBXkzDupmWfm9Cicgf8pxvgZlssBIVx9ZKhj7AnUR9yPrwGhNglAjjBibMfVHfHTwA/0?wx_fmt=png" alt="Alt text"></p>
+<p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/ssom.png?raw=true" alt="Alt text"></p>
 <h2 id="适用于"><a href="#适用于" class="headerlink" title="适用于"></a>适用于</h2><p>下面展示的例子与测试，适用于以下版本的 SharePoint：</p>
 <ul>
 <li>SharePoint 2010</li>
-<li>SharePoint 2013<h2 id="初始化Demo数据"><a href="#初始化Demo数据" class="headerlink" title="初始化Demo数据"></a>初始化Demo数据</h2><h3 id="获取列表中和一个-SPListItem"><a href="#获取列表中和一个-SPListItem" class="headerlink" title="获取列表中和一个 SPListItem"></a>获取列表中和一个 SPListItem</h3>这是得到SPListItem的基本代码。如果列表中包含至少一条数据，检索的第一项，否则创建新项目。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> web = SPContext.Current.Site.RootWeb;</div><div class="line"><span class="keyword">var</span> list = web.Lists.TryGetList(<span class="string">"fieldslist"</span>);</div><div class="line"><span class="keyword">if</span> (list == <span class="literal">null</span>) <span class="keyword">return</span>;</div><div class="line">SPListItem item;</div><div class="line">item = list.ItemCount &gt; <span class="number">0</span> ? list.Items[<span class="number">0</span>] : list.Items.Add();</div></pre></td></tr></table></figure>
-</li>
+<li>SharePoint 2013</li>
 </ul>
+<h2 id="初始化Demo数据"><a href="#初始化Demo数据" class="headerlink" title="初始化Demo数据"></a>初始化Demo数据</h2><h3 id="获取列表中和一个-SPListItem"><a href="#获取列表中和一个-SPListItem" class="headerlink" title="获取列表中和一个 SPListItem"></a>获取列表中和一个 SPListItem</h3><p>这是得到SPListItem的基本代码。如果列表中包含至少一条数据，检索的第一项，否则创建新项目。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> web = SPContext.Current.Site.RootWeb;</div><div class="line"><span class="keyword">var</span> list = web.Lists.TryGetList(<span class="string">"fieldslist"</span>);</div><div class="line"><span class="keyword">if</span> (list == <span class="literal">null</span>) <span class="keyword">return</span>;</div><div class="line">SPListItem item;</div><div class="line">item = list.ItemCount &gt; <span class="number">0</span> ? list.Items[<span class="number">0</span>] : list.Items.Add();</div></pre></td></tr></table></figure></p>
 <h3 id="创建示例中所使用的变量"><a href="#创建示例中所使用的变量" class="headerlink" title="创建示例中所使用的变量"></a>创建示例中所使用的变量</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> t = DateTime.Now.ToLongTimeString();</div><div class="line"><span class="comment">//StringBuilder for output</span></div><div class="line"><span class="keyword">var</span> s = <span class="keyword">new</span> StringBuilder();</div><div class="line"><span class="comment">//Variable for storing temporary values</span></div><div class="line"><span class="built_in">String</span> value;</div></pre></td></tr></table></figure>
 <h2 id="赋值、取值示例"><a href="#赋值、取值示例" class="headerlink" title="赋值、取值示例"></a>赋值、取值示例</h2><h3 id="设置和获取标题"><a href="#设置和获取标题" class="headerlink" title="设置和获取标题"></a>设置和获取标题</h3><ul>
 <li><p>赋值</p>
@@ -428,6 +434,7 @@ SharePoint 2013初始化De">
 <p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.taxonomy.taxonomyfieldvaluecollection(v=office.14" target="_blank" rel="external">TaxonomyFieldValueCollection</a>.aspx)<br><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spnumberformattypes.aspx" target="_blank" rel="external">SPNumberFormatTypes</a></p>
 <p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldtype.aspx" target="_blank" rel="external">SPFieldType</a></p>
 <p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spdatetimefieldformattype.aspx" target="_blank" rel="external">SPDateTimeFieldFormatType</a></p>
+<p>原文链接(需梯子):<a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spdatetimefieldformattype.aspx" target="_blank" rel="external">http://matthewyarlett.blogspot.com.au/2013/12/a-quick-guide-to-getting-and-setting.html)</a></p>
 
       
     </div>
@@ -519,7 +526,7 @@ SharePoint 2013初始化De">
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/images/avatar.gif"
+               src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/0.jpg?raw=true"
                alt="Liu Qiang" />
           <p class="site-author-name" itemprop="name">Liu Qiang</p>
           <p class="site-description motion-element" itemprop="description">Nothing but SharePoint</p>
@@ -592,7 +599,7 @@ SharePoint 2013初始化De">
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
+    NexT.Pisces
   </a>
 </div>
 
@@ -657,6 +664,13 @@ SharePoint 2013初始化De">
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
 
   
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>

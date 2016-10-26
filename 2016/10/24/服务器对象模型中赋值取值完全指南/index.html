@@ -107,7 +107,7 @@ SharePoint 2013
 
 初始化">
 <meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/ssom.png?raw=true">
-<meta property="og:updated_time" content="2016-10-24T11:37:35.760Z">
+<meta property="og:updated_time" content="2016-10-25T04:50:20.225Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器对象模型中赋值取值完全指南">
 <meta name="twitter:description" content="简介本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。
@@ -289,6 +289,13 @@ SharePoint 2013
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/24/服务器对象模型中赋值取值完全指南/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/24/服务器对象模型中赋值取值完全指南/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -326,6 +333,7 @@ SharePoint 2013
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"Title"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Title Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<a id="more"></a> 
 <h3 id="设置和获取文本字段"><a href="#设置和获取文本字段" class="headerlink" title="设置和获取文本字段"></a>设置和获取文本字段</h3><ul>
 <li><p>赋值</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">item[<span class="string">"textfield"</span>] = <span class="built_in">String</span>.Format(<span class="string">"At &#123;0&#125; dogs still can't write poems"</span>, t);</div><div class="line">item.Update();</div></pre></td></tr></table></figure>
@@ -465,6 +473,20 @@ SharePoint 2013
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/25/同步SharePoint中的文档到Outlook中查看/" rel="prev" title="同步SharePoint中的文档到Outlook中查看">
+                同步SharePoint中的文档到Outlook中查看 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
       
@@ -485,6 +507,10 @@ SharePoint 2013
 
           
   <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/24/服务器对象模型中赋值取值完全指南/"
+           data-title="服务器对象模型中赋值取值完全指南" data-url="http://yoursite.com/2016/10/24/服务器对象模型中赋值取值完全指南/">
+      </div>
     
   </div>
 
@@ -528,13 +554,20 @@ SharePoint 2013
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
           
 
         </nav>
@@ -681,9 +714,30 @@ SharePoint 2013
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sponline"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
 
 
 

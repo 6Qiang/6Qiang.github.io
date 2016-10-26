@@ -244,6 +244,117 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/25/同步SharePoint中的文档到Outlook中查看/" itemprop="url">
+                  同步SharePoint中的文档到Outlook中查看
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-25T21:37:42+08:00" content="2016-10-25">
+              2016-10-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/25/同步SharePoint中的文档到Outlook中查看/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/25/同步SharePoint中的文档到Outlook中查看/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="本文概况"><a href="#本文概况" class="headerlink" title="本文概况"></a>本文概况</h3><ul>
+<li>阅读时间: 约2分钟</li>
+<li>适用于：SharePoint Server 2010及以上版本</li>
+<li>面向人群：普通用户，SharePoint管理员</li>
+<li>操作难度：★★</li>
+</ul>
+<p>在日常工作中，总有一些常用的文档需要经常打开查看，其实我们可以使用Outlook连接SharePoint中的文档库，自动下载文档并将同其他邮件目录一起显示在导航区域，而且可以直接在Outlook中查看预览文档内容，就像查看邮件一样方便。</p>
+<p>当有新文件上传或文件有更新，文件变动也将同步显示在Outlook中，也可以点击在Outlook中的文件夹直接跳转到浏览器中查看。</p>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook5.png?raw=true" alt="Outlook预览文件"></p>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/25/同步SharePoint中的文档到Outlook中查看/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/24/服务器对象模型中赋值取值完全指南/" itemprop="url">
                   服务器对象模型中赋值取值完全指南
                 </a>
@@ -267,6 +378,13 @@
 
           
             
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/24/服务器对象模型中赋值取值完全指南/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/24/服务器对象模型中赋值取值完全指南/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -287,8 +405,7 @@
 
       
         
-          
-            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。</p>
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。</p>
 <p>方便演示创建了一个自定义列表，自定义列表包含多个字段，所有字段显示名称都被命名为基于它们所属字段类型的字段。例如，文本类型字段命名为<code>textfield</code>,如下图：</p>
 <p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/ssom.png?raw=true" alt="Alt text"></p>
 <h2 id="适用于"><a href="#适用于" class="headerlink" title="适用于"></a>适用于</h2><p>下面展示的例子与测试，适用于以下版本的 SharePoint：</p>
@@ -306,120 +423,11 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"Title"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Title Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="设置和获取文本字段"><a href="#设置和获取文本字段" class="headerlink" title="设置和获取文本字段"></a>设置和获取文本字段</h3><ul>
-<li><p>赋值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">item[<span class="string">"textfield"</span>] = <span class="built_in">String</span>.Format(<span class="string">"At &#123;0&#125; dogs still can't write poems"</span>, t);</div><div class="line">item.Update();</div></pre></td></tr></table></figure>
-</li>
-<li><p>取值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"textfield"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Text Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="多行文本-或富文本-字段"><a href="#多行文本-或富文本-字段" class="headerlink" title="多行文本(或富文本)字段"></a>多行文本(或富文本)字段</h3><ul>
-<li><p>赋值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">item[<span class="string">"notefield"</span>] = <span class="built_in">String</span>.Format(<span class="string">"At &#123;0&#125; dogs still can't write poems. \r\nBut then, neither can I!"</span>, t);</div><div class="line">item.Update();</div></pre></td></tr></table></figure>
-</li>
-<li><p>取值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"notefield"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Note Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="设置和获取Yes-No-字段-布尔值"><a href="#设置和获取Yes-No-字段-布尔值" class="headerlink" title="设置和获取Yes/No 字段(布尔值)"></a>设置和获取Yes/No 字段(布尔值)</h3><ul>
-<li><p>赋值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">item[<span class="string">"yesnofield"</span>] = <span class="literal">false</span>;</div><div class="line">item.Update();</div></pre></td></tr></table></figure>
-</li>
-<li><p>取值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"yesnofield"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Yes/No Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="设置和获取数字字段"><a href="#设置和获取数字字段" class="headerlink" title="设置和获取数字字段"></a>设置和获取数字字段</h3><ul>
-<li><p>赋值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">item[<span class="string">"numberfield"</span>] = <span class="number">35</span>;</div><div class="line"><span class="comment">//Or</span></div><div class="line">item[<span class="string">"numberfield"</span>] = Double.Parse(<span class="string">"354.67"</span>);</div><div class="line">item.Update();</div></pre></td></tr></table></figure>
-</li>
-<li><p>取值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"numberfield"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Number Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div><div class="line">value = Double.Parse(item[<span class="string">"numberfield"</span>].ToString()).ToString(<span class="string">"F1"</span>);</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Number Field (one decimal place): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div><div class="line">value = Double.Parse(item[<span class="string">"numberfield"</span>].ToString()).ToString(<span class="string">"F0"</span>);</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Number Field (two decimal places): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="设置和获取货币字段"><a href="#设置和获取货币字段" class="headerlink" title="设置和获取货币字段"></a>设置和获取货币字段</h3><p>货币字段使用字段类型相同的 SharePoint 作为数 （SPFieldNumber）。数字字段的类型是double。您可以使用标准数字格式指定要设置格式的数字显示，具体地说，格式化为一种货币。请参阅Double.ToString的详细信息。</p>
-<ul>
-<li><p>赋值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">item[<span class="string">"currencyfield"</span>] = Double.Parse(<span class="string">"354.67"</span>);</div><div class="line">item.Update();</div></pre></td></tr></table></figure>
-</li>
-<li><p>取值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"currencyfield"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Currency Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div><div class="line">value = Double.Parse(item[<span class="string">"currencyfield"</span>].ToString()).ToString(<span class="string">"C2"</span>);</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Currency Field (formatted as a currency): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div><div class="line">value = (Double.Parse(item[<span class="string">"numberfield"</span>].ToString()) + <span class="number">123</span>).ToString(<span class="string">"C2"</span>);</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Currency Field (addition): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="设置和获取百分百的字段"><a href="#设置和获取百分百的字段" class="headerlink" title="设置和获取百分百的字段"></a>设置和获取百分百的字段</h3><p>百分比字段使用字段类型相同的 SharePoint 作为数 （SPFieldNumber）。数字字段的类型是double。您可以使用标准数字格式指定要设置格式的数字显示，具体地说，格式为百分比。请参阅Double.ToString的详细信息。</p>
-<ul>
-<li><p>赋值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">item[<span class="string">"percentfield"</span>] = Double.Parse(<span class="string">"0.8735"</span>);</div><div class="line">item.Update();</div></pre></td></tr></table></figure>
-</li>
-<li><p>取值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"percentfield"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Percent Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div><div class="line">value = Double.Parse(item[<span class="string">"percentfield"</span>].ToString()).ToString(<span class="string">"P0"</span>);</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Percent Field (formatted as a percent, and as a whole number): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div><div class="line">value = Double.Parse(item[<span class="string">"percentfield"</span>].ToString()).ToString(<span class="string">"P2"</span>);</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Percent Field (formatted as a percent, with two decimal places): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="设置和获取日期字段"><a href="#设置和获取日期字段" class="headerlink" title="设置和获取日期字段"></a>设置和获取日期字段</h3><p>若要设置一个日期字段，使用 System.DateTime 对象创建一个日期，然后将 DateTime 对象分配给列表项的字段。当您检索日期时间字段的值时，可以使用标准日期格式说明符来设置格式的值的输出。请参阅DateTime.ToString的详细信息。</p>
-<ul>
-<li>赋值<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">item[<span class="string">"datefield"</span>] = DateTime.Now;</div><div class="line"><span class="comment">//Or, set the date to Now + two days</span></div><div class="line">item[<span class="string">"datefield"</span>] = DateTime.Now.AddDays(<span class="number">2</span>);</div><div class="line">item.Update();</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>取值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"datefield"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Date Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div><div class="line">value = DateTime.Parse(item[<span class="string">"datefield"</span>].ToString()).ToString(<span class="string">"d"</span>);</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Date Field (using the \"6/15/2008\" format): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div><div class="line">value = DateTime.Parse(item[<span class="string">"datefield"</span>].ToString()).ToString(<span class="string">"D"</span>);</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Date Field (using the \"Sunday, June 15, 2008\" format): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div><div class="line">value = DateTime.Parse(item[<span class="string">"datefield"</span>].ToString()).ToString(<span class="string">"R"</span>);</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Date Field (using the \"Sun, 15 Jun 2008 21:15:07 GMT\" format): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div><div class="line"><span class="keyword">var</span> dateValue = DateTime.Parse(item[<span class="string">"datefield"</span>].ToString());</div><div class="line">value = dateValue.AddDays(<span class="number">13</span>).ToString(<span class="string">"dd-MMM-yy"</span>);</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Date Field (using a custom display format): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure></p>
-<h3 id="设置和获取单择字段"><a href="#设置和获取单择字段" class="headerlink" title="设置和获取单择字段"></a>设置和获取单择字段</h3><p>单选赋值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> choicevalues = <span class="keyword">new</span> SPFieldMultiChoiceValue();</div><div class="line">choicevalues.Add(<span class="string">"Green"</span>);</div><div class="line">choicevalues.Add(<span class="string">"Blue"</span>);</div><div class="line">item[<span class="string">"multiplechoicefield"</span>] = choicevalues;</div><div class="line">item.Update();</div></pre></td></tr></table></figure></p>
-<p>单选取值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"choicefield"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Choice Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure></p>
-<h3 id="设置和获取多选择字段"><a href="#设置和获取多选择字段" class="headerlink" title="设置和获取多选择字段"></a>设置和获取多选择字段</h3><p>多选取值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">list.Fields[<span class="string">"multiplechoicefield"</span>].ParseAndSetValue(item, choicevalues.ToString());</div><div class="line"><span class="keyword">var</span> multipleChoiceValues = <span class="keyword">new</span> SPFieldMultiChoiceValue(item[<span class="string">"multiplechoicefield"</span>].ToString());</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Multiple Choice Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, multipleChoiceValues));</div><div class="line"><span class="keyword">for</span>(int i = <span class="number">0</span>; i &lt;= multipleChoiceValues.Count - <span class="number">1</span>; i++)</div><div class="line">&#123;</div><div class="line">  s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Multiple Choice Field, value &#123;0&#125;: &#123;1&#125;&lt;/span&gt;&lt;/br&gt;"</span>, i, multipleChoiceValues[i]));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>多选赋值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> choicevalues = <span class="keyword">new</span> SPFieldMultiChoiceValue();</div><div class="line">choicevalues.Add(<span class="string">"Green"</span>);</div><div class="line">choicevalues.Add(<span class="string">"Blue"</span>);</div><div class="line">item[<span class="string">"multiplechoicefield"</span>] = choicevalues;</div><div class="line">item.Update();</div></pre></td></tr></table></figure></p>
-<h3 id="设置和获取单用户字段字段"><a href="#设置和获取单用户字段字段" class="headerlink" title="设置和获取单用户字段字段"></a>设置和获取单用户字段字段</h3><p>单用户取值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"personfield"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Person Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div><div class="line"><span class="keyword">var</span> userFieldValue = <span class="keyword">new</span> SPFieldUserValue(web, item[<span class="string">"personfield"</span>].ToString());</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Person Field: Name = &#123;0&#125;, Email = &#123;1&#125;&lt;/span&gt;&lt;/br&gt;"</span>, userFieldValue.User.Name, userFieldValue.User.Email));</div></pre></td></tr></table></figure></p>
-<p>单用户赋值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">item[<span class="string">"personfield"</span>] = web.EnsureUser(<span class="string">"contoso\\fred"</span>);</div><div class="line"><span class="comment">//or</span></div><div class="line">item[<span class="string">"personfield"</span>] = web.EnsureUser(<span class="string">"fred@contoso.com"</span>);</div><div class="line">item.Update();</div></pre></td></tr></table></figure></p>
-<h3 id="设置和获取多用户字段"><a href="#设置和获取多用户字段" class="headerlink" title="设置和获取多用户字段"></a>设置和获取多用户字段</h3><p>多用户取值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> fieldUserValueCollection = <span class="keyword">new</span> SPFieldUserValueCollection(web, item[<span class="string">"lotsofpeoplefield"</span>].ToString());</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;MultiPerson Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, fieldUserValueCollection));</div><div class="line"><span class="keyword">var</span> userCount = <span class="number">1</span>;</div><div class="line">foreach(SPFieldUserValue v <span class="keyword">in</span> fieldUserValueCollection)</div><div class="line">&#123;</div><div class="line">  s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;MultiPerson Field, value &#123;0&#125;: &#123;1&#125;&lt;/span&gt;&lt;/br&gt;"</span>, userCount, v.User.Name));</div><div class="line">  userCount++;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>多用户赋值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> lotsofpeople = <span class="keyword">new</span> SPFieldUserValueCollection(web, item[<span class="string">"lotsofpeoplefield"</span>].ToString());</div><div class="line"><span class="keyword">var</span> personA = web.EnsureUser(<span class="string">"contoso\\fred"</span>);</div><div class="line"><span class="keyword">var</span> personAValue = <span class="keyword">new</span> SPFieldUserValue(web, personA.ID, personA.LoginName);</div><div class="line"><span class="keyword">var</span> personB = web.EnsureUser(<span class="string">"contoso\\barnie"</span>);</div><div class="line"><span class="keyword">var</span> personBValue = <span class="keyword">new</span> SPFieldUserValue(web, personB.ID, personB.LoginName);</div><div class="line">lotsofpeople.Add(personAValue);</div><div class="line">lotsofpeople.Add(personBValue);</div><div class="line">item[<span class="string">"lotsofpeoplefield"</span>] = lotsofpeople;</div><div class="line">item.Update();</div></pre></td></tr></table></figure></p>
-<h3 id="设置和获取查阅字段"><a href="#设置和获取查阅字段" class="headerlink" title="设置和获取查阅字段"></a>设置和获取查阅字段</h3><p>赋值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> lookupField = list.Fields[<span class="string">"lookupfield"</span>] <span class="keyword">as</span> SPFieldLookup;</div><div class="line"><span class="keyword">var</span> lookupList = web.Lists[<span class="keyword">new</span> Guid(lookupField.LookupList)];</div><div class="line"><span class="keyword">var</span> lookupitem = lookupList.Items[<span class="number">0</span>];</div><div class="line"><span class="comment">//-or-</span></div><div class="line"><span class="comment">//lookupitem = lookupList.GetItemByUniqueId(new Guid("fc71b84c-74d4-4f7c-9eed-fb7a5fbe24a6"));</span></div><div class="line"><span class="comment">//-or-</span></div><div class="line"><span class="comment">//lookupitem = lookupList.GetItemById(1);</span></div><div class="line"><span class="keyword">var</span> lookupValue = <span class="keyword">new</span> SPFieldLookupValue(lookupitem.ID, lookupitem.ID.ToString());</div><div class="line">item[<span class="string">"lookupfield"</span>] = lookupValue;</div><div class="line">item.Update();</div></pre></td></tr></table></figure></p>
-<p>取值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> lookupItemValue = <span class="keyword">new</span> SPFieldLookupValue(item[<span class="string">"lookupfield"</span>].ToString());</div><div class="line">value = lookupItemValue.LookupValue;</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Lookup Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure></p>
-<h3 id="设置和获取超链接字段"><a href="#设置和获取超链接字段" class="headerlink" title="设置和获取超链接字段"></a>设置和获取超链接字段</h3><p>赋值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hyperlinkField = list.Fields[<span class="string">"hyperlinkfield"</span>] <span class="keyword">as</span> SPFieldUrl;</div><div class="line"><span class="keyword">var</span> urlFieldValue = <span class="keyword">new</span> SPFieldUrlValue();</div><div class="line">urlFieldValue.Description = <span class="string">"Microsoft"</span>;</div><div class="line">urlFieldValue.Url = <span class="string">"http://www.microsoft.com  "</span>;</div><div class="line"><span class="comment">//SharePoint 2013 Only</span></div><div class="line"></div><div class="line">hyperlinkField.ValidateParseAndSetValue(item, urlFieldValue.ToString());</div><div class="line"><span class="comment">//SharePoint 2010 and SharePoint 2013</span></div><div class="line"></div><div class="line">hyperlinkField.ParseAndSetValue(item, urlFieldValue.ToString());</div><div class="line">item.Update();</div></pre></td></tr></table></figure></p>
-<p>取值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hyperlinkFieldValue = <span class="keyword">new</span> SPFieldUrlValue(item[<span class="string">"hyperlinkfield"</span>].ToString());</div><div class="line">value = <span class="built_in">String</span>.Format(<span class="string">"&lt;a href=\"&#123;1&#125;\" alt=\"&#123;0&#125;\"&gt;&#123;0&#125;&lt;/a&gt;"</span>, hyperlinkFieldValue.Description, hyperlinkFieldValue.Url);</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Hyperlink Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure></p>
-<h3 id="设置和获取托管的元数据字段"><a href="#设置和获取托管的元数据字段" class="headerlink" title="设置和获取托管的元数据字段"></a>设置和获取托管的元数据字段</h3><p>赋值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> managedMetaDataField = list.Fields[<span class="string">"managedmetadatafield"</span>] <span class="keyword">as</span> TaxonomyField;</div><div class="line"><span class="keyword">var</span> termsetId = managedMetaDataField.TermSetId;</div><div class="line"><span class="keyword">var</span> termstoreId = managedMetaDataField.SspId;</div><div class="line"><span class="keyword">var</span> taxonomySession = <span class="keyword">new</span> TaxonomySession(web.Site);</div><div class="line"><span class="keyword">var</span> termstore = taxonomySession.TermStores[termstoreId];</div><div class="line"><span class="keyword">var</span> termset = termstore.GetTermSet(termsetId);</div><div class="line"><span class="keyword">var</span> termname = <span class="string">"Rubbish Tip"</span>;</div><div class="line"><span class="keyword">var</span> terms = termset.GetTerms(termname, <span class="literal">false</span>);</div><div class="line">Term term;</div><div class="line"><span class="keyword">if</span>(terms.Count == <span class="number">0</span>)</div><div class="line">&#123;</div><div class="line">  term = termset.CreateTerm(termname, termstore.Languages[<span class="number">0</span>]);</div><div class="line">  termstore.CommitAll();</div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span></div><div class="line">&#123;</div><div class="line">  term = terms[<span class="number">0</span>];</div><div class="line">&#125;</div><div class="line">managedMetaDataField.SetFieldValue(item, term);</div><div class="line">item.Update();</div></pre></td></tr></table></figure></p>
-<p>取值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> taxonomyFieldValue = item[<span class="string">"managedmetadatafield"</span>] <span class="keyword">as</span> TaxonomyFieldValue;</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Taxonomy Field: &#123;0&#125; (&#123;1&#125;)&lt;/span&gt;&lt;/br&gt;"</span>, taxonomyFieldValue.Label, taxonomyFieldValue.TermGuid));</div></pre></td></tr></table></figure></p>
-<h3 id="设置和获取值的多个托管元数据字段"><a href="#设置和获取值的多个托管元数据字段" class="headerlink" title="设置和获取值的多个托管元数据字段"></a>设置和获取值的多个托管元数据字段</h3><p>多值的托管元数据字段赋值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> managedMetaDataField = list.Fields[<span class="string">"managedmetadatafield"</span>] <span class="keyword">as</span> TaxonomyField;</div><div class="line"><span class="keyword">var</span> termsetId = managedMetaDataField.TermSetId;</div><div class="line"><span class="keyword">var</span> termstoreId = managedMetaDataField.SspId;</div><div class="line"><span class="keyword">var</span> taxonomySession = <span class="keyword">new</span> TaxonomySession(web.Site);</div><div class="line"><span class="keyword">var</span> termstore = taxonomySession.TermStores[termstoreId];</div><div class="line"><span class="keyword">var</span> termset = termstore.GetTermSet(termsetId);</div><div class="line"><span class="keyword">var</span> multipleManagedMetaDataField = list.Fields[<span class="string">"multiplemanagedmetadatafield"</span>] <span class="keyword">as</span> TaxonomyField;</div><div class="line"><span class="keyword">var</span> termCollection = <span class="keyword">new</span> TaxonomyFieldValueCollection(multipleManagedMetaDataField);</div><div class="line"><span class="keyword">var</span> taxonomyLabels = <span class="keyword">new</span>[] &#123;<span class="string">"Frog Catcher"</span>, , <span class="string">"Giraffe Stealer"</span> <span class="string">"Moon Dog"</span>&#125;;</div><div class="line">Term term;</div><div class="line">foreach(<span class="keyword">var</span> label <span class="keyword">in</span> taxonomyLabels)</div><div class="line">&#123;</div><div class="line">  <span class="keyword">var</span> terms = termset.GetTerms(label, <span class="literal">false</span>);</div><div class="line">  term = <span class="literal">null</span>;</div><div class="line">  <span class="keyword">if</span>(terms.Count == <span class="number">0</span>)</div><div class="line">  &#123;</div><div class="line">    term = termset.CreateTerm(label, termstore.Languages[<span class="number">0</span>]);</div><div class="line">    termstore.CommitAll();</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">else</span></div><div class="line">  &#123;</div><div class="line">    term = terms[<span class="number">0</span>];</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">var</span> termValue = <span class="keyword">new</span> TaxonomyFieldValue(multipleManagedMetaDataField);</div><div class="line">  termValue.TermGuid = term.Id.ToString();</div><div class="line">  termValue.Label = term.Name;</div><div class="line">  termCollection.Add(termValue);</div><div class="line">&#125;</div><div class="line">multipleManagedMetaDataField.SetFieldValue(item, termCollection);</div><div class="line">item.Update();</div></pre></td></tr></table></figure></p>
-<p>多值的托管元数据字段取值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> taxonomyFieldValueCollection = item[<span class="string">"multiplemanagedmetadatafield"</span>] <span class="keyword">as</span> TaxonomyFieldValueCollection;</div><div class="line">value = <span class="built_in">String</span>.Empty;</div><div class="line">foreach(<span class="keyword">var</span> taxonomyValue <span class="keyword">in</span> taxonomyFieldValueCollection)</div><div class="line">&#123;</div><div class="line">  value = <span class="built_in">String</span>.IsNullOrEmpty(value)</div><div class="line">  ? <span class="built_in">String</span>.Format(<span class="string">"&#123;0&#125; (&#123;1&#125;)"</span>, taxonomyValue.Label, taxonomyValue.TermGuid)</div><div class="line">  : <span class="built_in">String</span>.Format(<span class="string">"&#123;0&#125;, &#123;1&#125; (&#123;2&#125;)"</span>, value, taxonomyValue.Label, taxonomyValue.TermGuid);</div><div class="line">  <span class="comment">//Or, to use get the term</span></div><div class="line">  <span class="keyword">var</span> currentTerm = termstore.GetTerm(<span class="keyword">new</span> Guid(taxonomyValue.TermGuid));</div><div class="line">  <span class="comment">//do something with the term</span></div><div class="line">&#125;</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Multiple Taxonomy Field Values: &#123;0&#125;)&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure></p>
-<h3 id="设置和获取计算的字段"><a href="#设置和获取计算的字段" class="headerlink" title="设置和获取计算的字段"></a>设置和获取计算的字段</h3><ul>
-<li>赋值</li>
-</ul>
-<p>计算字段的值是在创建或更新列表项时计算的。它是不可能直接设置此值。可以使用以下方法来设置公式，用以计算字段值。在这些方法之前，有四个主要的属性，可以设置在计算的字段 ；公式、 输出类型、 DisplayFormat 和简写。您需要设置，哪些属性取决于计算值。</p>
-<p>公式： 用来计算值的公式。<br>输出类型： 从计算结果值的类型。受支持的类型，文本、 数字、 整数、 货币、 boolean 类型的值和日期时间。<br>DisplayFormat： 提供号码、 整数和货币用于指定的小数位数<br>简写： 与日期时间用于指定日期或日期和时间。<br>在以下示例中，我们执行以下任务：</p>
-<ul>
-<li>查看当前的公式</li>
-<li>查看当前的显示格式</li>
-<li>从两位小数的显示格式更改为四位小数</li>
-<li>从货币的输出类型更改为整数</li>
-<li>更改公式、 输出类型并设置日期格式</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//Configuring the calculated field</span></div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Calculated Field Formula: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, calculatedfield.Formula));</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Calculated Display Format: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, calculatedfield.DisplayFormat));</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Calculated Output Type: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, calculatedfield.OutputType));</div><div class="line">calculatedfield.DisplayFormat = SPNumberFormatTypes.FourDecimals;</div><div class="line">calculatedfield.Update();</div><div class="line">item.Update();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Calculated Field (Display Format 4 decimals): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>,</div><div class="line"> calculatedfield.GetFieldValueAsText(item[<span class="string">"calculatedfield"</span>])));</div><div class="line">calculatedfield.OutputType = SPFieldType.Integer;</div><div class="line">calculatedfield.Update();</div><div class="line">item.Update();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Calculated Field (Output Type Integer): &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, calculatedfield.GetFieldValueAsText(item[<span class="string">"calculatedfield"</span>])));</div><div class="line">calculatedfield.Formula = <span class="string">"=[datefield]+90"</span>;</div><div class="line">calculatedfield.DateFormat = SPDateTimeFieldFormatType.DateOnly;</div><div class="line">calculatedfield.OutputType = SPFieldType.DateTime;</div><div class="line">calculatedfield.Update();</div><div class="line">item.Update();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Calculated Field (Updated Formula, Date Format and Output Type):&#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, calculatedfield.GetFieldValueAsText(item[<span class="string">"calculatedfield"</span>])));</div></pre></td></tr></table></figure>
-<ul>
-<li>取值</li>
-</ul>
-<p>计算的字段的工作方式不同于正常的领域。在列表字段，建立计算公式和时添加或更新列表项，为该列表项的列的值根据计算公式。<br>获取一个值，计算字段<br>获取计算的字段的引用。然后获取列表项的引用。最后，调用 <code>GetFieldValueAsText</code> 方法，通过在项目对象计算字段的值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> calculatedfield = list.Fields[<span class="string">"calculatedfield"</span>] <span class="keyword">as</span> SPFieldCalculated;</div><div class="line"></div><div class="line">value = calculatedfield.GetFieldValueAsText(item[<span class="string">"calculatedfield"</span>]);</div><div class="line"></div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Calculated Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfield.aspx" target="_blank" rel="external">SPField</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldtext.aspx" target="_blank" rel="external">SPFieldText</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldmultilinetext.aspx" target="_blank" rel="external">SPFieldMultiLineText(Note)</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldboolean.aspx" target="_blank" rel="external">SPFieldBoolean</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/Microsoft.SharePoint.SPFieldCalculated.aspx" target="_blank" rel="external">SPFieldCalculated</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldchoice.aspx" target="_blank" rel="external">SPFieldChoice</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldcurrency.aspx" target="_blank" rel="external">SPFieldCurrency</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfielddatetime.aspx" target="_blank" rel="external">SPFieldDateTime</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldlookup.aspx" target="_blank" rel="external">SPFieldLookup</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldmultichoice.aspx" target="_blank" rel="external">SPFieldMultiChoice</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldmultichoicevalue.aspx" target="_blank" rel="external">SPFieldMultiChoiceValue</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldnumber.aspx" target="_blank" rel="external">SPFieldNumber</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldurl.aspx" target="_blank" rel="external">SPFieldUrl</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldurlvalue.aspx" target="_blank" rel="external">SPFieldUrlValue</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfielduservalue.aspx" target="_blank" rel="external">SPFieldUserValue</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfielduservaluecollection.aspx" target="_blank" rel="external">SPFieldUserValueCollection</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.taxonomy.taxonomyfield.aspx" target="_blank" rel="external">TaxonomyField</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.taxonomy.taxonomyfieldvalue(v=office.14" target="_blank" rel="external">TaxonomyFieldValue</a>.aspx)</p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.taxonomy.taxonomyfieldvaluecollection(v=office.14" target="_blank" rel="external">TaxonomyFieldValueCollection</a>.aspx)<br><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spnumberformattypes.aspx" target="_blank" rel="external">SPNumberFormatTypes</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfieldtype.aspx" target="_blank" rel="external">SPFieldType</a></p>
-<p><a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spdatetimefieldformattype.aspx" target="_blank" rel="external">SPDateTimeFieldFormatType</a></p>
-<p>原文链接(需梯子):<a href="http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spdatetimefieldformattype.aspx" target="_blank" rel="external">http://matthewyarlett.blogspot.com.au/2013/12/a-quick-guide-to-getting-and-setting.html)</a></p>
-
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/10/24/服务器对象模型中赋值取值完全指南/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -487,13 +495,20 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
 
           
 
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
           
 
         </nav>
@@ -625,9 +640,30 @@
 
   
 
+  
+    
+  
 
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sponline"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
 
   
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
 
 
 

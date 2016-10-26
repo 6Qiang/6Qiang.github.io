@@ -1,0 +1,679 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="文档库;普通用户;SharePoint管理员," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="本文概况
+阅读时间: 约2分钟
+适用于：SharePoint Server 2010及以上版本
+面向人群：普通用户，SharePoint管理员
+操作难度：★★
+
+在日常工作中，总有一些常用的文档需要经常打开查看，其实我们可以使用Outlook连接SharePoint中的文档库，自动下载文档并将同其他邮件目录一起显示在导航区域，而且可以直接在Outlook中查看预览文档内容，就像查看邮件一样方便。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="同步SharePoint中的文档到Outlook中查看">
+<meta property="og:url" content="http://yoursite.com/2016/10/25/同步SharePoint中的文档到Outlook中查看/index.html">
+<meta property="og:site_name" content="SharePoint Tips">
+<meta property="og:description" content="本文概况
+阅读时间: 约2分钟
+适用于：SharePoint Server 2010及以上版本
+面向人群：普通用户，SharePoint管理员
+操作难度：★★
+
+在日常工作中，总有一些常用的文档需要经常打开查看，其实我们可以使用Outlook连接SharePoint中的文档库，自动下载文档并将同其他邮件目录一起显示在导航区域，而且可以直接在Outlook中查看预览文档内容，就像查看邮件一样方便。">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook5.png?raw=true">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook1.png?raw=true">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook2.png?raw=true">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook3.png?raw=true">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook4.png?raw=true">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook5.png?raw=true">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook11.png?raw=true">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook6.png?raw=true">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook7.png?raw=true">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook88.png?raw=true">
+<meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook99.png?raw=true">
+<meta property="og:updated_time" content="2016-10-26T12:16:55.387Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="同步SharePoint中的文档到Outlook中查看">
+<meta name="twitter:description" content="本文概况
+阅读时间: 约2分钟
+适用于：SharePoint Server 2010及以上版本
+面向人群：普通用户，SharePoint管理员
+操作难度：★★
+
+在日常工作中，总有一些常用的文档需要经常打开查看，其实我们可以使用Outlook连接SharePoint中的文档库，自动下载文档并将同其他邮件目录一起显示在导航区域，而且可以直接在Outlook中查看预览文档内容，就像查看邮件一样方便。">
+<meta name="twitter:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook5.png?raw=true">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"always"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/25/同步SharePoint中的文档到Outlook中查看/"/>
+
+
+  <title> 同步SharePoint中的文档到Outlook中查看 | SharePoint Tips </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="en">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-86197940-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?02e511b78698b0f4da4b2e6bb8ef1c2d";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">SharePoint Tips</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Nothing But SharePoint</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                同步SharePoint中的文档到Outlook中查看
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-25T21:37:42+08:00" content="2016-10-25">
+              2016-10-25
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/25/同步SharePoint中的文档到Outlook中查看/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/25/同步SharePoint中的文档到Outlook中查看/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="本文概况"><a href="#本文概况" class="headerlink" title="本文概况"></a>本文概况</h3><ul>
+<li>阅读时间: 约2分钟</li>
+<li>适用于：SharePoint Server 2010及以上版本</li>
+<li>面向人群：普通用户，SharePoint管理员</li>
+<li>操作难度：★★</li>
+</ul>
+<p>在日常工作中，总有一些常用的文档需要经常打开查看，其实我们可以使用Outlook连接SharePoint中的文档库，自动下载文档并将同其他邮件目录一起显示在导航区域，而且可以直接在Outlook中查看预览文档内容，就像查看邮件一样方便。</p>
+<p>当有新文件上传或文件有更新，文件变动也将同步显示在Outlook中，也可以点击在Outlook中的文件夹直接跳转到浏览器中查看。</p>
+<h3 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3><p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook5.png?raw=true" alt="Outlook预览文件"></p>
+<a id="more"></a>
+<h3 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h3><p>打开任意文档库，<code>在文档库根目录</code>点击<code>Ribbon功能区</code>的<code>库</code>选项卡，点击上面<code>连接到Outlook</code>图标按钮</p>
+<p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook1.png?raw=true" alt="Outlook预览文件"></p>
+<p>浏览器将弹出安全提示框<code>是否允许浏览器打开此计算机上的程序</code>，点击<code>允许</code></p>
+<p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook2.png?raw=true" alt="Outlook预览文件"></p>
+<p>浏览器启动Outlook后，会询问<code>是否将此SharePoint 文档库-连接到Outlook</code>，点击<code>是</code>即可</p>
+<p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook3.png?raw=true" alt="Outlook预览文件"></p>
+<p>允许Outlook连接SharePoint后，会提示输入SharePoint账号密码登陆，这里的界面因SharePoint版本可能不一致，但没有关系，登陆验证即可</p>
+<p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook4.png?raw=true" alt="Outlook预览文件"></p>
+<p>验证成功后，Outlook将同步下载所连接文档库的文档到本地</p>
+<p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook5.png?raw=true" alt="Outlook预览文件"></p>
+<p>下载后的文件显示在<code>SharePoint 列表</code>栏目下，并与邮件一样会高亮显示未查看的条目，另外文档库中的文件夹层级结构也下载下来了，可以折叠展开显示。</p>
+<h3 id="文件预览"><a href="#文件预览" class="headerlink" title="文件预览"></a>文件预览</h3><p>选择一个文件，文件内容将在邮件预览区显示，支持Word、Excel、PPT直接预览，PDF需要安装与Outlook兼容的预览程序，也可以直接双击文件直接调用本机PDF默认打开程序预览。</p>
+<h3 id="通过邮件发送文件"><a href="#通过邮件发送文件" class="headerlink" title="通过邮件发送文件"></a>通过邮件发送文件</h3><p>在已离线的文件上，点击右键，在显示的菜单中选择<code>转发</code>，将显示<code>新建邮件</code>窗口，可以看到文件已经在邮件的附件栏里了，即可输入收件人发送该文件，</p>
+<h3 id="在浏览器中打开"><a href="#在浏览器中打开" class="headerlink" title="在浏览器中打开"></a>在浏览器中打开</h3><p>在Outlook中查看文件比较方便，但如果需要查看文件的历史版本就需要在浏览器中操作了。我们可以直接在Outlook<code>SharePoint 列表</code>栏目下，在想要在浏览器中查看的文件夹上点击右键，选择<code>在Web浏览器中打开</code>,将自动在浏览器中跳转到SharePoint中所选文件夹目录。</p>
+<p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook11.png?raw=true" alt="Outlook预览文件"></p>
+<blockquote>
+<p>如果<code>在Web浏览器中打开</code>后，提示404错误，请确认在点击<code>连接到Outlook</code>按钮时是否处于文档库根目录。</p>
+<p>处理办法：回到浏览器，导航到所要连接到Outlook中的SharePoint文档库根目录，点击<code>连接到Outlook</code>按钮安装上面的步骤重新操作即刻，Outlook中先前已连接的库可以右键删除.</p>
+</blockquote>
+<p>需要注意的是，这些离线到本地的文件属于只读文件，对文件的删除操作都不会保存到SharePoint文档库中。</p>
+<h3 id="将文件更改同步到服务器"><a href="#将文件更改同步到服务器" class="headerlink" title="将文件更改同步到服务器"></a>将文件更改同步到服务器</h3><p>在Outlook同步的SharePoint文档库文件列表中，双击文档自动调用Office程序打开该文件，选择<code>脱机编辑</code>，将会把当前文件保存在导航栏<code>SharePoint 草稿</code>栏目中并进入编辑模式，修改完成后关闭保存。</p>
+<p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook6.png?raw=true" alt="Outlook预览文件"></p>
+<p>在<code>SharePoint 草稿</code>中找到刚才编辑的文件，选中后可以在文档预览区看到提示<code>只能在这台计算机上使用此文档的更改，请打开此文档以签入更改</code>，根据提示双击打开文件，将提示是<code>否尝试将您的脱机更改更新到服务器</code>(会在Outlook检测到联机的情况下提示，否则不会提示),点击<code>更新</code></p>
+<p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook7.png?raw=true" alt="Outlook预览文件"></p>
+<p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook88.png?raw=true" alt="Outlook预览文件"></p>
+<p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/Outlook99.png?raw=true" alt="Outlook预览文件"></p>
+<p>文件将同步更新到SharePoint服务器，更新完成后可以看到所打开的文件状态又恢复成<code>只读</code>模式。</p>
+<p>以上演示环境：</p>
+<ul>
+<li>SharePoint版本：SharePoint Online</li>
+<li>Outlook版本：Outlook 2016</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/ercode.jpg?raw=true" alt="Liu Qiang wechat" style="width: 200px; max-width: 100%;"/>
+    <div>Nothing But SharePoint</div>
+</div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/文档库-普通用户-SharePoint管理员/" rel="tag">#文档库;普通用户;SharePoint管理员</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/24/服务器对象模型中赋值取值完全指南/" rel="next" title="服务器对象模型中赋值取值完全指南">
+                <i class="fa fa-chevron-left"></i> 服务器对象模型中赋值取值完全指南
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/10/25/同步SharePoint中的文档到Outlook中查看/"
+           data-title="同步SharePoint中的文档到Outlook中查看" data-url="http://yoursite.com/2016/10/25/同步SharePoint中的文档到Outlook中查看/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/0.jpg?raw=true"
+               alt="Liu Qiang" />
+          <p class="site-author-name" itemprop="name">Liu Qiang</p>
+          <p class="site-description motion-element" itemprop="description">Nothing But SharePoint</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#本文概况"><span class="nav-number">1.</span> <span class="nav-text">本文概况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效果图"><span class="nav-number">2.</span> <span class="nav-text">效果图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实现步骤"><span class="nav-number">3.</span> <span class="nav-text">实现步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件预览"><span class="nav-number">4.</span> <span class="nav-text">文件预览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过邮件发送文件"><span class="nav-number">5.</span> <span class="nav-text">通过邮件发送文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在浏览器中打开"><span class="nav-number">6.</span> <span class="nav-text">在浏览器中打开</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将文件更改同步到服务器"><span class="nav-number">7.</span> <span class="nav-text">将文件更改同步到服务器</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Liu Qiang</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sponline"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

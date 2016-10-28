@@ -106,11 +106,11 @@
 在SharePoint2010中，在用户名下的菜单中存在以其他用户身份登录菜单，从SharePoint 2013版本开始取消了这个菜单。
   
 切换用户的2种方式在工作中难免会遇到需要切换用户的时候，下面介绍2种方式">
-<meta property="og:image" content="http://yoursite.com/~/image/2016/10/user1.png">
-<meta property="og:image" content="http://yoursite.com/~/image/2016/10/user1-1.png">
-<meta property="og:image" content="http://yoursite.com/~/image/2016/10/user1-1.png">
-<meta property="og:image" content="http://yoursite.com/~/image/2016/10/user1-1.png">
-<meta property="og:updated_time" content="2016-10-28T11:56:33.862Z">
+<meta property="og:image" content="http://yoursite.com/image/2016/10/user1.png">
+<meta property="og:image" content="http://yoursite.com/image/2016/10/user1-1.png">
+<meta property="og:image" content="http://yoursite.com/image/2016/10/user1-1A.png">
+<meta property="og:image" content="http://yoursite.com/image/2016/10/user1-1A.png">
+<meta property="og:updated_time" content="2016-10-28T12:05:29.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="切换用户登录">
 <meta name="twitter:description" content="概况
@@ -122,7 +122,7 @@
 在SharePoint2010中，在用户名下的菜单中存在以其他用户身份登录菜单，从SharePoint 2013版本开始取消了这个菜单。
   
 切换用户的2种方式在工作中难免会遇到需要切换用户的时候，下面介绍2种方式">
-<meta name="twitter:image" content="http://yoursite.com/~/image/2016/10/user1.png">
+<meta name="twitter:image" content="http://yoursite.com/image/2016/10/user1.png">
 
 
 
@@ -325,13 +325,13 @@
 <li>难度指数：★☆☆☆☆</li>
 </ul>
 <p>在SharePoint2010中，在用户名下的菜单中存在<code>以其他用户身份登录</code>菜单，从SharePoint 2013版本开始取消了这个菜单。</p>
-<p>  <img src="~/image/2016/10/user1.png" alt="user"></p>
+<p>  <img src="/image/2016/10/user1.png" alt="user"></p>
 <h2 id="切换用户的2种方式"><a href="#切换用户的2种方式" class="headerlink" title="切换用户的2种方式"></a>切换用户的2种方式</h2><p>在工作中难免会遇到需要切换用户的时候，下面介绍2种方式</p>
 <a id="more"></a>
 <ul>
 <li><p>以其他用户身份运行</p>
 <p>在<code>任务栏</code>或<code>开始菜单</code>中找到IE图标，按下<code>Shift</code>键同时在IE图标上鼠标点击<code>右键</code>,选择<code>以其他用户身份运行</code>。</p>
-<p><img src="~/image/2016/10/user1-1.png" alt="user"></p>
+<p><img src="/image/2016/10/user1-1.png" alt="user"></p>
 </li>
 <li><p>通过URL地址访问</p>
 <p> <a href="http://SiteUrl/_layouts/closeConnection.aspx?loginasanotheruser=true" target="_blank" rel="external">http://SiteUrl/_layouts/closeConnection.aspx?loginasanotheruser=true</a></p>
@@ -339,10 +339,12 @@
 </li>
 </ul>
 <h2 id="一键切换"><a href="#一键切换" class="headerlink" title="一键切换"></a>一键切换</h2><p>  利用以上第二种方式实现一键切换。</p>
-<p>  将链接<a href="javascript:document.location.href=_spPageContextInfo.webAbsoluteUrl+ &quot;/_layouts/closeConnection.aspx?loginasanotheruser=true&amp;source=&quot;+document.location.href" target="_blank" rel="external">切换用户</a>通过鼠标拖放到书签栏。</p>
-<p>  <img src="~/image/2016/10/user1-1.png" alt="user"></p>
+<p>  
+ <a href="javascript:document.location.href=_spPageContextInfo.webAbsoluteUrl+ "/_layouts/closeConnection.aspx?loginasanotheruser=true&source="+document.location.href" target="_blank" rel="external">切换用户</a>
+ 通过鼠标拖放到书签栏。</p>
+<p>  <img src="/image/2016/10/user1-1A.png" alt="user"></p>
 <p>  打开SharePoint网站，点击浏览器书签上的<code>切换用户</code>，将弹出用户登录窗口，输入账号密码登陆即完成切换操作。</p>
-<p><img src="~/image/2016/10/user1-1.png" alt="user"></p>
+<p><img src="/image/2016/10/user1-1A.png" alt="user"></p>
 <p>  原理解释：点击<code>切换用户</code>书签，将在当前页面执行一段js代码，拼接为url地址并跳转到<code>以其他用户身份登录</code>页面。</p>
 <p>  代码如下：</p>
 <pre><code>javascript:document.location.href=_spPageContextInfo.webAbsoluteUrl+

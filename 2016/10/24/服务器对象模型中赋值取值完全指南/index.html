@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="开发者," />
 
 
 
@@ -84,41 +84,44 @@
 
 
 
-<meta name="description" content="简介本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。
+<meta name="description" content="概况
+阅读时间：约10分钟(通读)
+适用版本：SharePoint Server 2010及以上
+面向人群：开发者
+难度指数：★★★☆☆
+
+本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。
 方便演示创建了一个自定义列表，自定义列表包含多个字段，所有字段显示名称都被命名为基于它们所属字段类型的字段。例如，文本类型字段命名为textfield,如下图：
 
-适用于下面展示的例子与测试，适用于以下版本的 SharePoint：
-
-SharePoint 2010
-SharePoint 2013
-
-初始化">
+适用于下">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务器对象模型中赋值取值完全指南">
 <meta property="og:url" content="http://yoursite.com/2016/10/24/服务器对象模型中赋值取值完全指南/index.html">
 <meta property="og:site_name" content="SharePoint Tips">
-<meta property="og:description" content="简介本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。
+<meta property="og:description" content="概况
+阅读时间：约10分钟(通读)
+适用版本：SharePoint Server 2010及以上
+面向人群：开发者
+难度指数：★★★☆☆
+
+本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。
 方便演示创建了一个自定义列表，自定义列表包含多个字段，所有字段显示名称都被命名为基于它们所属字段类型的字段。例如，文本类型字段命名为textfield,如下图：
 
-适用于下面展示的例子与测试，适用于以下版本的 SharePoint：
-
-SharePoint 2010
-SharePoint 2013
-
-初始化">
+适用于下">
 <meta property="og:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/ssom.png?raw=true">
-<meta property="og:updated_time" content="2016-10-25T04:50:20.225Z">
+<meta property="og:updated_time" content="2016-10-28T08:10:26.663Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务器对象模型中赋值取值完全指南">
-<meta name="twitter:description" content="简介本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。
+<meta name="twitter:description" content="概况
+阅读时间：约10分钟(通读)
+适用版本：SharePoint Server 2010及以上
+面向人群：开发者
+难度指数：★★★☆☆
+
+本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。
 方便演示创建了一个自定义列表，自定义列表包含多个字段，所有字段显示名称都被命名为基于它们所属字段类型的字段。例如，文本类型字段命名为textfield,如下图：
 
-适用于下面展示的例子与测试，适用于以下版本的 SharePoint：
-
-SharePoint 2010
-SharePoint 2013
-
-初始化">
+适用于下">
 <meta name="twitter:image" content="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/ssom.png?raw=true">
 
 
@@ -315,7 +318,13 @@ SharePoint 2013
       
 
       
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。</p>
+        <h2 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h2><ul>
+<li>阅读时间：约10分钟(通读)</li>
+<li>适用版本：SharePoint Server 2010及以上</li>
+<li>面向人群：开发者</li>
+<li>难度指数：★★★☆☆</li>
+</ul>
+<p>本文演示了SharePoint在服务端对象模型中如何对列表各种字段类型赋值和取值操作。</p>
 <p>方便演示创建了一个自定义列表，自定义列表包含多个字段，所有字段显示名称都被命名为基于它们所属字段类型的字段。例如，文本类型字段命名为<code>textfield</code>,如下图：</p>
 <p><img src="https://github.com/6Qiang/6Qiang.GitHub.io/blob/master/image/2016/10/ssom.png?raw=true" alt="Alt text"></p>
 <h2 id="适用于"><a href="#适用于" class="headerlink" title="适用于"></a>适用于</h2><p>下面展示的例子与测试，适用于以下版本的 SharePoint：</p>
@@ -333,7 +342,7 @@ SharePoint 2013
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">value = item[<span class="string">"Title"</span>].ToString();</div><div class="line">s.AppendLine(<span class="built_in">String</span>.Format(<span class="string">"&lt;span&gt;Title Field: &#123;0&#125;&lt;/span&gt;&lt;/br&gt;"</span>, value));</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<a id="more"></a> 
+<a id="more"></a>
 <h3 id="设置和获取文本字段"><a href="#设置和获取文本字段" class="headerlink" title="设置和获取文本字段"></a>设置和获取文本字段</h3><ul>
 <li><p>赋值</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">item[<span class="string">"textfield"</span>] = <span class="built_in">String</span>.Format(<span class="string">"At &#123;0&#125; dogs still can't write poems"</span>, t);</div><div class="line">item.Update();</div></pre></td></tr></table></figure>
@@ -471,6 +480,12 @@ SharePoint 2013
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/开发者/" rel="tag">#开发者</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
@@ -480,8 +495,8 @@ SharePoint 2013
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/10/25/同步SharePoint中的文档到Outlook中查看/" rel="prev" title="同步SharePoint中的文档到Outlook中查看">
-                同步SharePoint中的文档到Outlook中查看 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/10/25/同步SharePoint中的文档到Outlook中查看/" rel="prev" title="在Outlook查看SharePoint文档库中的文档到">
+                在Outlook查看SharePoint文档库中的文档到 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -554,7 +569,7 @@ SharePoint 2013
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -564,7 +579,7 @@ SharePoint 2013
           
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
@@ -593,7 +608,7 @@ SharePoint 2013
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#适用于"><span class="nav-number">2.</span> <span class="nav-text">适用于</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化Demo数据"><span class="nav-number">3.</span> <span class="nav-text">初始化Demo数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取列表中和一个-SPListItem"><span class="nav-number">3.1.</span> <span class="nav-text">获取列表中和一个 SPListItem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建示例中所使用的变量"><span class="nav-number">3.2.</span> <span class="nav-text">创建示例中所使用的变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赋值、取值示例"><span class="nav-number">4.</span> <span class="nav-text">赋值、取值示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取标题"><span class="nav-number">4.1.</span> <span class="nav-text">设置和获取标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取文本字段"><span class="nav-number">4.2.</span> <span class="nav-text">设置和获取文本字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多行文本-或富文本-字段"><span class="nav-number">4.3.</span> <span class="nav-text">多行文本(或富文本)字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取Yes-No-字段-布尔值"><span class="nav-number">4.4.</span> <span class="nav-text">设置和获取Yes/No 字段(布尔值)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取数字字段"><span class="nav-number">4.5.</span> <span class="nav-text">设置和获取数字字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取货币字段"><span class="nav-number">4.6.</span> <span class="nav-text">设置和获取货币字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取百分百的字段"><span class="nav-number">4.7.</span> <span class="nav-text">设置和获取百分百的字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取日期字段"><span class="nav-number">4.8.</span> <span class="nav-text">设置和获取日期字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取单择字段"><span class="nav-number">4.9.</span> <span class="nav-text">设置和获取单择字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取多选择字段"><span class="nav-number">4.10.</span> <span class="nav-text">设置和获取多选择字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取单用户字段字段"><span class="nav-number">4.11.</span> <span class="nav-text">设置和获取单用户字段字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取多用户字段"><span class="nav-number">4.12.</span> <span class="nav-text">设置和获取多用户字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取查阅字段"><span class="nav-number">4.13.</span> <span class="nav-text">设置和获取查阅字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取超链接字段"><span class="nav-number">4.14.</span> <span class="nav-text">设置和获取超链接字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取托管的元数据字段"><span class="nav-number">4.15.</span> <span class="nav-text">设置和获取托管的元数据字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取值的多个托管元数据字段"><span class="nav-number">4.16.</span> <span class="nav-text">设置和获取值的多个托管元数据字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取计算的字段"><span class="nav-number">4.17.</span> <span class="nav-text">设置和获取计算的字段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概况"><span class="nav-number">1.</span> <span class="nav-text">概况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#适用于"><span class="nav-number">2.</span> <span class="nav-text">适用于</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化Demo数据"><span class="nav-number">3.</span> <span class="nav-text">初始化Demo数据</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取列表中和一个-SPListItem"><span class="nav-number">3.1.</span> <span class="nav-text">获取列表中和一个 SPListItem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建示例中所使用的变量"><span class="nav-number">3.2.</span> <span class="nav-text">创建示例中所使用的变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赋值、取值示例"><span class="nav-number">4.</span> <span class="nav-text">赋值、取值示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取标题"><span class="nav-number">4.1.</span> <span class="nav-text">设置和获取标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取文本字段"><span class="nav-number">4.2.</span> <span class="nav-text">设置和获取文本字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多行文本-或富文本-字段"><span class="nav-number">4.3.</span> <span class="nav-text">多行文本(或富文本)字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取Yes-No-字段-布尔值"><span class="nav-number">4.4.</span> <span class="nav-text">设置和获取Yes/No 字段(布尔值)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取数字字段"><span class="nav-number">4.5.</span> <span class="nav-text">设置和获取数字字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取货币字段"><span class="nav-number">4.6.</span> <span class="nav-text">设置和获取货币字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取百分百的字段"><span class="nav-number">4.7.</span> <span class="nav-text">设置和获取百分百的字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取日期字段"><span class="nav-number">4.8.</span> <span class="nav-text">设置和获取日期字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取单择字段"><span class="nav-number">4.9.</span> <span class="nav-text">设置和获取单择字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取多选择字段"><span class="nav-number">4.10.</span> <span class="nav-text">设置和获取多选择字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取单用户字段字段"><span class="nav-number">4.11.</span> <span class="nav-text">设置和获取单用户字段字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取多用户字段"><span class="nav-number">4.12.</span> <span class="nav-text">设置和获取多用户字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取查阅字段"><span class="nav-number">4.13.</span> <span class="nav-text">设置和获取查阅字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取超链接字段"><span class="nav-number">4.14.</span> <span class="nav-text">设置和获取超链接字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取托管的元数据字段"><span class="nav-number">4.15.</span> <span class="nav-text">设置和获取托管的元数据字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取值的多个托管元数据字段"><span class="nav-number">4.16.</span> <span class="nav-text">设置和获取值的多个托管元数据字段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置和获取计算的字段"><span class="nav-number">4.17.</span> <span class="nav-text">设置和获取计算的字段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
           </div>
         </section>

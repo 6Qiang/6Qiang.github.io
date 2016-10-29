@@ -301,192 +301,6 @@
             
               
                 
-                <a class="post-title-link" href="/2016/10/29/Shadowsocks-QRCode/" itemprop="url">
-                  Shadowsocks QRCode
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-29T17:33:29+08:00" content="2016-10-29">
-              2016-10-29
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/生产力利器/" itemprop="url" rel="index">
-                    <span itemprop="name">生产力利器</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/29/Shadowsocks-QRCode/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/29/Shadowsocks-QRCode/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <style media="screen">
-body {TEXT-ALIGN: center;}
-div { MARGIN-RIGHT: auto; MARGIN-LEFT: auto; }
-</style>
-
-<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.1.min.js"></script>
-<script type="text/javascript" src="/js/src/base64.js"></script>
-<script type="text/javascript" src="/js/src/jquery.qrcode.min.js"></script>
-
-<div><br>  <p><a href="https://www.mianvpn.com/" target="_blank" rel="external">源</a>Shadowsocks试用账号密码6小时变更一次，特制作此页面自动获取最新配置并生成二维码方便使用</p><br>  <p class="">推荐Shadowsocks客户端Wingy，扫码自动连接,iOS、Android通用</p><br>  <p>Window官方客户端下载<a href="https://github.com/shadowsocks/shadowsocks-csharp/releases" target="_blank" rel="external">下载</a></p>，也可扫屏幕上的二维码哦<br>  <div id="ss0"><br><p></p><br><div id="code0"></div><br>  </div><br>  <div id="ss1"><br><p></p><br><div id="code1"></div><br>  </div><br>  <div id="ss2"><br><p></p><br><div id="code2"></div><br>  </div><br></div>
-
-<script type="text/javascript">
-function getQRCode(account,index){
-//  console.log(base64encode(account));
-  var enCodeStr="ss://"+base64encode(account);
-  $("#code"+index).qrcode(enCodeStr);
-}
-
-  var htmlStr="";
-$.getJSON("https://api.mianvpn.com/ajax.php?verify=true&mod=getfreess", function(data){
-  for (var j = 0; j < data.length; j++) {
-var ss= data[j];
-  //  console.log(ss);
-var location=ss.r;
-var ip=ss.i;
-var port=ss.p;
-var pwd=ss.pw;
-var method=ss.m;
-var info=JSON.parse(ss.l);
-  //  console.log(info);
-var account=method+":"+pwd+"@"+ip+":"+port;
-var img="";
-var htmlStr="<div class='"+ip+"'><p>"+location+"  负载:"+info.netspeed+"</p><div>";
-$("#ss"+j).find('p').html(htmlStr);
-  //  console.log(account);
-getQRCode(account,j);
-  }
-});
-
-//ss://cmM0LW1kNToyMjkyQDQ3Ljg5LjkuMjAxOnVuZGVmaW5lZA==
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<hr>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
                 <a class="post-title-link" href="/2016/10/29/Create-a-folder-with-custom-roperties/" itemprop="url">
                   创建可自定义属性的文件夹
                 </a>
@@ -1096,7 +910,7 @@ getQRCode(account,j);
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">4</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1104,7 +918,7 @@ getQRCode(account,j);
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1113,7 +927,7 @@ getQRCode(account,j);
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

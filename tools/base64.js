@@ -94,4 +94,3 @@ out += String.fromCharCode(((c3 & 0x03) << 6) | c4);
 }
 return out;
 }
-</iz@onicos.co.jp>

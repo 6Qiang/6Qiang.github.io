@@ -168,7 +168,7 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     }
   };
 </script>
@@ -182,7 +182,7 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
   <title> 创建可自定义属性的文件夹 | SharePoint Tips </title>
 </head>
 
-<body itemscope itemtype="//schema.org/WebPage" lang="en">
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -254,7 +254,29 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-            Home
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -262,7 +284,19 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-            Archives
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -273,7 +307,9 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
             <a href="javascript:;" class="popup-trigger">
           
             
-            Search
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
           </a>
         </li>
       
@@ -336,7 +372,7 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Posted on</span>
+            <span class="post-meta-item-text">发表于</span>
             <time itemprop="dateCreated" datetime="2016-10-29T02:52:01+08:00" content="2016-10-29">
               2016-10-29
             </time>
@@ -348,7 +384,7 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
                   <a href="/categories/管理员/" itemprop="url" rel="index">
@@ -358,7 +394,7 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
 
                 
                 
-                  , 
+                  ， 
                 
 
               
@@ -566,10 +602,10 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -586,25 +622,25 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
           <div class="site-state-item site-state-posts">
             <a href="/archives">
               <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">posts</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           
             <div class="site-state-item site-state-categories">
-              
+              <a href="/categories">
                 <span class="site-state-item-count">9</span>
-                <span class="site-state-item-name">categories</span>
-              
+                <span class="site-state-item-name">分类</span>
+              </a>
             </div>
           
 
           
             <div class="site-state-item site-state-tags">
-              
+              <a href="/tags">
                 <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">tags</span>
-              
+                <span class="site-state-item-name">标签</span>
+              </a>
             </div>
           
 
@@ -620,6 +656,24 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
         
 
         
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://msdn.microsoft.com/zh-cn/library/office/dn833469" title="SharePoint" target="_blank">SharePoint</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://sharepoint.stackexchange.com/" title="Stackoverflow" target="_blank">Stackoverflow</a>
+                </li>
+              
+            </ul>
+          </div>
         
 
       </section>
@@ -658,11 +712,11 @@ SharePoint中的文件夹分为2种，一种是文档库中的文件夹，一种
 </div>
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Pisces
   </a>
